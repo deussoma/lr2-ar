@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Завдання 2 - Фрукти та овочі</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.75);
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            z-index: 10;
+            font-size: 11px;
+            backdrop-filter: blur(5px);
+            max-height: 40%;
+            overflow-y: auto;
+        }
+        button, select, input {
+            background: #333;
+            color: white;
+            border: 1px solid #ccc;
+            padding: 5px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .control-group {
+            display: inline-flex;
+            gap: 4px;
+            align-items: center;
+            background: rgba(0,0,0,0.5);
+            padding: 4px 8px;
+            border-radius: 6px;
+        }
+        #start-ar {
+            background: #ff5722;
+            font-weight: bold;
+        }
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 20;
+            background: #333;
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+        hr {
+            margin: 5px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="location.href='index.html'">← Назад до меню</button>
+    <div id="controls">
+        <div class="control-group">🔄 Обертання: <button id="toggleRotate">Увімк.</button></div>
+        <div class="control-group">↺ Вісь: 
+            <button id="axisX">X</button>
+            <button id="axisY" style="background:#ff8800;">Y</button>
+            <button id="axisZ">Z</button>
+        </div>
+        <div class="control-group">🎨 Матеріал: 
+            <button id="matOriginal">Оригінал</button>
+            <button id="matAlt">Альтернативний</button>
+        </div>
+        <hr>
+        <div class="control-group">💡 Світло сцени: 
+            <button id="sceneOn">Увімк.</button>
+            <button id="sceneOff">Вимк.</button>
+        </div>
+        <div class="control-group">🔦 Світло моделі: 
+            <button id="modelOn">Увімк.</button>
+            <button id="modelOff">Вимк.</button>
+        </div>
+        <div class="control-group">🏮 Тип світла: 
+            <button id="lightPoint">Point</button>
+            <button id="lightSpot">Spot</button>
+            <button id="lightDir">Directional</button>
+        </div>
+        <div class="control-group">💪 Інтенсивність: <input type="range" id="intensity" min="0" max="1.5" step="0.01" value="0.8"></div>
+        <div class="control-group">🎨 Колір світла: <input type="color" id="lightColor" value="#ffffff"></div>
+        <button id="start-ar" style="margin-left:auto;">🚀 START AR</button>
+    </div>
+    <script type="module" src="src/task2.js"></script>
+</body>
+</html>

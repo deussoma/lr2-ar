@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>WebAR Лабораторна №2 - Варіант 5</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Додаткові стилі тільки для меню */
+        .menu-container {
+            text-align: center;
+            padding: 2rem;
+        }
+        .task-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 300px;
+            margin: 2rem auto;
+        }
+        button {
+            padding: 1rem;
+            font-size: 1.2rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .author {
+            margin-top: 3rem;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+        h1, h2 {
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Лабораторна робота №2</h1>
+        <h2>Варіант 5</h2>
+        <p><strong>Студент:</strong> Гапонова Дарина</p>
+        <p><strong>Група:</strong> КНУС-12</p>
+        <div class="task-buttons">
+            <button onclick="location.href='task1.html'">📐 Завдання 1: TorusKnot, Tube, Capsule</button>
+            <button onclick="location.href='task2.html'">🍎 Завдання 2: Фрукти та овочі (GLTF)</button>
+            <button onclick="location.href='task3.html'">🔮 Завдання 3: Додекаедр + Hit Test</button>
+            <button onclick="location.href='task4.html'">🧸 Завдання 4: Іграшки (GLTF + Hit Test)</button>
+        </div>
+        <div class="author">
+            <p>Кафедра АСУ</p>
+            <p>Львів – 2026</p>
+        </div>
+    </div>
+</body>
+</html>

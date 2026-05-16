@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Завдання 3 - Додекаедр + Hit Test</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.7);
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            z-index: 10;
+            font-size: 12px;
+            backdrop-filter: blur(5px);
+        }
+        button, input {
+            background: #333;
+            color: white;
+            border: 1px solid #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #start-ar {
+            background: #ff5722;
+            font-weight: bold;
+        }
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 20;
+            background: #333;
+        }
+        .group {
+            background: rgba(0,0,0,0.5);
+            padding: 5px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="location.href='index.html'">← Назад</button>
+    <div id="controls">
+        <div class="group">🎨 Колір: <input type="color" id="colorPicker" value="#ffaa44"></div>
+        <div class="group">🔄 Обертання: <button id="toggleRotate">Увімк.</button></div>
+        <div class="group">📏 Розмір: <button id="scaleUp">+</button> <button id="scaleDown">-</button> <span id="scaleVal">0.10</span></div>
+        <div class="group">🫨 Пульсація: <button id="toggleScaleAnim">Вимк.</button></div>
+        <div class="group">✨ Матеріал: 
+            <button id="matStd">Стандарт</button>
+            <button id="matEmis">Емісійний</button>
+            <button id="matTrans">Прозорий</button>
+        </div>
+        <button id="start-ar">🚀 START AR</button>
+    </div>
+    <script type="module" src="src/task3.js"></script>
+</body>
+</html>
